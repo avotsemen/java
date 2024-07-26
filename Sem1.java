@@ -7,6 +7,17 @@ public class Sem1 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input number: ");
         int n = scanner.nextInt();
+        int result = getSumMinusPr(n);
+
+        System.out.println("result: " + result);
+    }
+    
+/**
+ * 
+ * @param n начальное значение
+ * @return произведение минус сумма
+ */
+    private static int getSumMinusPr(int n) {
         int sum = 0;
         int pr = 1;
         while (n != 0) {
@@ -14,6 +25,6 @@ public class Sem1 {
             pr *= n % 10;
             n /= 10;
         }
-        System.out.println("result: " + (pr - sum));
+        return pr - sum;
     }
 }
